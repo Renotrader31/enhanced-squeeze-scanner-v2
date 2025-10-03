@@ -21,12 +21,10 @@
   }
 }
 
-@layer components {
-  /* Main Container */
-  .scanner-container {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-    min-height: 100vh;
-  }
+.scanner-container {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  min-height: 100vh;
+}
   
   /* Header Styling - More like original */
   .scanner-header {
