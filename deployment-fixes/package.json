@@ -1,0 +1,44 @@
+{
+  "name": "ultimate-squeeze-scanner",
+  "version": "4.0.0",
+  "description": "Ultimate squeeze scanner with enhanced Ortex API integration",
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.292.0",
+    "recharts": "^2.8.0",
+    "axios": "^1.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.0",
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "keywords": [
+    "squeeze scanner",
+    "short interest",
+    "ortex",
+    "options flow",
+    "gamma squeeze",
+    "stock scanner",
+    "real-time",
+    "trading"
+  ],
+  "author": "Enhanced Squeeze Scanner",
+  "license": "MIT"
+}

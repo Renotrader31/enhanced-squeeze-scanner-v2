@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "name": "ultimate-squeeze-scanner",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ],
+  "functions": {
+    "pages/api/scan-single.js": {
+      "maxDuration": 30
+    },
+    "pages/api/scan-bulk.js": {
+      "maxDuration": 300
+    },
+    "pages/api/stream.js": {
+      "maxDuration": 300
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/stream",
+      "destination": "/api/stream"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/scanner",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
