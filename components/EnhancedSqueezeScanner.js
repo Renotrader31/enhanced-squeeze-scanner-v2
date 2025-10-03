@@ -74,7 +74,7 @@ const EnhancedSqueezeScanner = () => {
   // Bulk scan function
   const startBulkScan = async () => {
     try {
-      const response = await fetch('/api/scan-bulk-demo-simple', {
+      const response = await fetch('/api/scan-bulk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
